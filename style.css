@@ -8,7 +8,10 @@
 
 :root {}
 
-body {}
+html {
+    scroll-behavior: smooth;
+
+}
 
 /*----------------------------------------------- Header section start -----------------------------------------------*/
 .header {
@@ -20,7 +23,7 @@ body {}
 .navbar {
     /* background: rgb(255, 218, 149); */
     /* background: rgb(186, 255, 149); */
-    /* background: rgb(255, 255, 255); */
+    background: rgb(255, 255, 255);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-shadow: 0px 0px 20px 20px solid black !important;
 
@@ -76,10 +79,7 @@ body {}
     background: rgb(62, 137, 22) !important;
 }
 
-.nav-login-icon .afterlogin {
-    visibility: hidden;
 
-}
 
 .nav-login-icon img {
     height: 55px;
@@ -92,10 +92,33 @@ body {}
 
 }
 
+/* User logout popup */
+.user-logout-popup {
+    background: #fffcf6;
+    z-index: 999;
+    height: 20vh;
+    width: 15rem;
+    position: fixed;
+    top: 12%;
+    right: 1.8rem;
+    /* right: -50rem; */
+    box-shadow: 1px 0px 5px black;
+}
+
+.user-logout-popup ul a:hover {
+    color: green !important;
+    transform: translateX(50px) !important;
+
+}
+
+
 /* --------------------- My cart list start -------------------- */
 .cartlist,
 .user-login-popup,
-.login-popup-form {
+.login-popup-form,
+.user-logout-popup,
+.nav-login-icon .afterlogin,
+.user-logout-popup {
     display: none;
 }
 
@@ -119,6 +142,16 @@ body {}
     height: 100px;
     width: 100px;
     object-fit: cover;
+}
+
+.nav-login-icon span {
+    position: relative;
+}
+
+.cart-notification {
+    position: absolute;
+    top: -18px;
+    right: 15px;
 }
 
 /*  --------------------- My cart list end -------------------- */
@@ -260,8 +293,6 @@ body {}
 .carousel-caption {
     position: absolute;
     top: 35%;
-    /* width: 450px;
-    height: 100vh; */
     text-align: start !important;
 }
 
@@ -288,12 +319,6 @@ body {}
 }
 
 /*----------------------------------------------- Header section end -----------------------------------------------*/
-
-
-
-/*----------------------------------------------- About section start -----------------------------------------------*/
-/*----------------------------------------------- About section end -----------------------------------------------*/
-
 
 .section-heading {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -614,40 +639,65 @@ body {}
 
 }
 
+/* -####################################  View cart page ####################################-*/
 
-/* <!-------------------------------- Here the view cart page is start --------------------------------> */
-
-.favorite-section {
-    grid-column: 2/-1;
+.viewcart-list  {
+    font-family: 'Times New Roman', Times, serif;
 }
-
-.favorite-section table tr th {
+.viewcart-list table tr th {
     border: 1px solid black;
     padding: 23px;
 }
 
-.favorite-section table tr td {
+.viewcart-list table tr td {
     border: 1px solid black;
     padding: 13px;
     text-align: center;
 }
 
-.favorite-section table tr td a {
+.viewcart-list table tr td a {
     text-decoration: none;
     color: black;
 }
 
-.favorite-section table tr td a:hover {
+.viewcart-list table tr td a:hover {
     color: gray;
 }
 
-.favorite-section table td img {
+.viewcart-list table td img {
     height: 80px;
     width: 80px;
     cursor: pointer;
 }
 
-.favorite-section table tr:nth-child(even) {
+.viewcart-list table td img:hover {
+    transform: scale(1.4);
+    transition: all 0.3s;
+}
+
+.viewcart-list table td i:hover {
+    color: red !important;
+    cursor: pointer;
+    transition: all 0.2s;
+
+}
+
+.viewcart-list table tr:nth-child(even) {
     background: #f0f0f0;
 
+}
+
+/* -####################################  user profile page ####################################-*/
+.profile-left-nav-list ul a {
+    color: black;
+    text-decoration: none !important;
+}
+
+.profile-page {
+    height: 10px !important;
+}
+
+.profile-page-details .left-side,
+.profile-page-details .right-side-content {
+    font-family: 'Times New Roman', Times, serif;
 }

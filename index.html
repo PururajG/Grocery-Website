@@ -46,26 +46,27 @@
                     </div>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#Home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Products</a>
+                            <a class="nav-link" href="#Products">Products</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="#Features">
                                 Features
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="#Contact">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
+                            <a class="nav-link" href="#Blog">Blog</a>
                         </li>
 
                     </ul>
-                    <div class="nav-login-icon ">
+                    <div class="nav-login-icon d-flex  align-items-center">
                         <span class="nav-acc-card m-1  " onclick="showcart()"><i class="bi bi-cart3  p-2 rounded"></i>
+                            <span class="cart-notification bg-danger text-light p-1 rounded-circle">2</span>
                         </span>
                         <span class="nav-acc-user m-1 " id="loginicon" onclick="showuser()"> <i
                                 class="bi bi-person-circle p-2 rounded"></i> </span>
@@ -76,38 +77,17 @@
             </div>
         </nav>
 
-        <script>
-            
-
-            function logout() {
-                var logout = document.getElementById('logout').style.display = "block"
-            }
-        </script>
-
-
-        <!------------- user login  popup------------->
-        <!-- <div class="user-login-popup  p-3" id="logout">
+        <!------------- user logout  popup------------->
+        <div class="user-logout-popup  p-3" id="logout">
             <div class="">
-                <p class="fw-bold fs-4 text-center text-success">Login Now</p>
-                <div class="text-center">
-                    <input class=" m-2 p-2 rounded" type="email" name="" id="" placeholder="Enter your email"
-                        autocomplete="off" aria-busy="true">
-                    <input class=" m-2 p-2 rounded" type="password" name="" id="" placeholder="Enter your password"
-                        autocomplete="off" aria-busy="true">
-
-                </div>
-                <i onclick="hideuser()" class="cross-icon fs-2 bi bi-x fs-2"></i>
-                <div class="text-center mt-4 ">
-                    <p class="ms-4">Forget password.? <span class="text-success">click here.</span></p>
-                    <p class="px-5" onclick="showsignpopup()">Don't have an account..? <span class="text-success">create
-                            account</span></p>
-                </div>
-                <div class="text-center">
-                    <a href="#" class="btn btn-outline-success mt-4 px-5 py-2" onclick="afterlogin()"> Sign in </a>
-
-                </div>
+                <ul class="list-unstyled">
+                    <a class="fs-5 fw-bold p-2 m-2  text-decoration-none text-dark" href="user profile.html">View
+                        Profile</a>
+                    <a class="fs-5 fw-bold p-2 m-2  text-decoration-none text-dark" href="index.html"
+                        onclick="hidelogout()" id="logoutuser">Logout</a>
+                </ul>
             </div>
-        </div> -->
+        </div>
 
         <!-- <script>
             window.onscroll = function () { scrollfunc() };
@@ -194,9 +174,9 @@
                 <p class="fw-bold fs-4 text-center text-success">Login Now</p>
                 <div class="text-center">
                     <input class=" m-2 p-2 rounded" type="email" name="" id="" placeholder="Enter your email"
-                        autocomplete="off" aria-busy="true">
+                        autocomplete="off" required>
                     <input class=" m-2 p-2 rounded" type="password" name="" id="" placeholder="Enter your password"
-                        autocomplete="off" aria-busy="true">
+                        autocomplete="off" required>
 
                 </div>
                 <i onclick="hideuser()" class="cross-icon fs-2 bi bi-x fs-2"></i>
@@ -240,8 +220,8 @@
                             placeholder="Enter your Email" required>
                         <input class=" my-4 bg-none d-flex py-1 border border-dark" type="password"
                             placeholder="Enter your password" required>
-                        <a href="dashboard.html"
-                            class="col-8 login-popup-submit-btn btn btn-success text-white mt-2 ">Sign up </a>
+                        <a href="#"
+                            class="col-8 login-popup-submit-btn btn btn-success text-white mt-2 " onclick="afterlogin()">Sign up </a>
                     </form>
                     <p class="mt-4">Already have an acount..? <a href="#" class="text-decoration-none"
                             onclick="showuser()">Login.</a></p>
@@ -316,7 +296,7 @@
 
     <!----------------------------------------------- Product section start ----------------------------------------------->
     <div class="products mt-2 py-4 mx-4 rounded ">
-        <div class="text-center section-heading">
+        <div class="text-center section-heading"  id="Home">
             <h3><span class="">P</span>roducts</h3>
             <p>Our Best Products</p>
         </div>
@@ -576,7 +556,7 @@
 
     <!----------------------------------------------- Product second section start ----------------------------------------------->
     <div class="Features mt-2 mx-4 py-4">
-        <div class="text-center section-heading">
+        <div class="text-center section-heading" id="Products">
             <h3><span class="">F</span>routs</h3>
             <p>Our Best Frouts</p>
         </div>
@@ -829,7 +809,7 @@
 
     <!----------------------------------------------- Service section start ----------------------------------------------->
     <div class="Services mt-5">
-        <div class="text-center section-heading">
+        <div class="text-center section-heading" id="Features">
             <h3><span class="">F</span>eatures</h3>
             <p>Our Features & Services</p>
         </div>
@@ -886,7 +866,7 @@
     <!----------------------------------------------- Contact section start ----------------------------------------------->
 
     <div class="contact   mt-5">
-        <div class="text-center section-heading">
+        <div class="text-center section-heading" id="Contact">
             <h3><span class="">C</span>ontact Us</h3>
             <p>Our Best Frouts</p>
         </div>
@@ -929,7 +909,7 @@
 
     <!----------------------------------------------- Blog section start ----------------------------------------------->
     <div class="blog mt-4 mx-4 py-2">
-        <div class="text-center section-heading">
+        <div class="text-center section-heading" id="Blog">
             <h3><span class="">B</span>log</h3>
             <p>Our Blog</p>
         </div>

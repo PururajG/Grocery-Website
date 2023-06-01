@@ -71,10 +71,15 @@ function showcart() {
     const cardlist = document.getElementById('cart').style.display = "block";
     const user = document.getElementById('user').style.display = "none";
     const signupform = document.getElementById('sign-popup').style.display = "none";
+    var logout = document.getElementById('logout').style.display = "none"
+
+    
 }
 
 function hidecart() {
     const cardlist = document.getElementById('cart').style.display = "none";
+    var logout = document.getElementById('logout').style.display = "none"
+
 }
 
 
@@ -99,5 +104,18 @@ function hidesignpopup() {
 function afterlogin() {
     var afterlogin = document.getElementById('loginicon').style.display = 'none'
     var afterlogin = document.getElementById('user').style.display = 'none'
-    var userlogin = document.getElementById('afterlogin').style.visibility = 'visible';
+    var userlogin = document.getElementById('afterlogin').style.display = 'block';
+    const userfornm = document.getElementById('sign-popup').style.display = "none";
+
 }
+
+function logout() {
+    var logout = document.getElementById('logout').style.display = "block"
+    const cardlist = document.getElementById('cart').style.display = "none";
+
+    
+}
+function hidelogout() {
+    var logoutuser = document.getElementById('logout').style.display="none"
+}       
+
