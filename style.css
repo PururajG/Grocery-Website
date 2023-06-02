@@ -294,6 +294,7 @@ html {
     position: absolute;
     top: 35%;
     text-align: start !important;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .slider1-text {
@@ -343,6 +344,7 @@ html {
 .card {
     cursor: pointer;
     overflow: hidden;
+    
 }
 
 .card:hover {
