@@ -220,7 +220,8 @@
 
                     <div class="row bg-light user-profile py-2 px-3  text-center">
                         <div class="col" style="height: 60px; width: 85px ;">
-                            <img src="Img/afterlogin.png" alt="" style="height: 100px; width: 100px ; object-fit: cover;">
+                            <img src="Img/afterlogin.png" alt=""
+                                style="height: 100px; width: 100px ; object-fit: cover;">
                             <i class="edit-pic fs-4 bi bi-pencil-square"></i>
 
                         </div>
@@ -233,89 +234,148 @@
                     <div class="row profile-left-nav-list mt-2 bg-light ">
                         <ul class="list-unstyled  py-2 px-3 ">
                             <a href="user profile.html" class="">
-                                <li class="px-2 py-1 my-1  fs-5 bg-success rounded text-white active"><i class="bi bi-info-circle"></i> Personal Information</li>
+                                <li class="px-2 py-1 my-1  fs-5 "><i class="bi bi-info-circle"></i> Personal Information
+                                </li>
                             </a>
 
                             <a href="order.html">
                                 <li class="px-2 py-1 my-1 fs-5"><i class="bi bi-cart4"></i> My order</li>
-                            </a> 
-                             <a href="Wishlist.html">
+                            </a>
+                            <a href="Wishlist.html">
                                 <li class="px-2 py-1 my-1 fs-5"><i class="bi bi-bag-heart"></i> My Wishlist</li>
-                            </a> 
-                             <a href="address.html">
-                                <li class="px-2 py-1 my-1 fs-5"><i class="bi bi-pin-map-fill"></i> Delivery Address</li>
+                            </a>
+                            <a href="address.html">
+                                <li class="px-2 py-1 my-1 fs-5 bg-success rounded text-white active"><i
+                                        class="bi bi-pin-map-fill"></i> Delivery Address</li>
                             </a>
                             <a href="index.html">
                                 <li class="px-2 py-1 my-1 fs-5"><i class="bi bi-power"></i> Logout</li>
-                            </a>                     
+                            </a>
                         </ul>
                     </div>
                 </div>
 
             </div>
 
-            <!-------------------------------- Here the main user right profile section is start -------------------------------->
+            <!-------------------------------- Here the manage address section is start -------------------------------->
             <div class="col-8 right-side-content ">
 
-                <div class="wishlist-page-right px-4 py-2 bg-light" id="My Wishlist">
+                <div class="manage-adrs-page-right px-4 py-2 bg-light" id="My Wishlist">
 
                     <div class=" py-2 ">
                         <p class="fs-3 ">
-                            <strong>My Information</strong>
+                            <strong>Manage Address</strong>
                         </p>
                     </div>
+              
+                    <div class="" id="old-address">
+                        <form class="old-addres-form">
+                            <div class="plus-addres col-6  fs-4 text-center text-primary border border-gray "
+                                onclick="oldaddress()"><i class="bi bi-plus-lg"></i> Add a new Address</div>
 
-                    <div>
-                        <form>
+                            <div class="mt-5">
+                                <!-- <p> In front of SDM court Sambhal, 244302 </p> -->
+                                <!-- <button class="btn btn-primary">Add a new address</button> -->
+                                <div>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="fw-bold fs-5">Aryan</p> <i class="bi bi-three-dots-vertical"
+                                            onclick="oldaddress()"></i>
+
+                                    </div>
+                                    <p class="">Laxminagar Sambhal Uttar Pradesh 244302 </p>
+                                </div>
+                                <div>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="fw-bold fs-5">Aryan</p> <i class="bi bi-three-dots-vertical"
+                                            onclick="oldaddress()"></i>
+
+                                    </div>
+                                    <p class="">Laxminagar Sambhal Uttar Pradesh 244302 </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="border border-gray p-2" id="new-address" style="display: none;">
+                        <p class="fw-bold fs-5 text-success"> Add a New Address</p>
+                        <form class="add-addres-form" action="">
                             <div class="row">
                                 <div class="mb-3 col-4">
                                     <label for="exampleInputEmail1" class="form-label fw-bold">First Name</label>
-                                    <input type="text" class="form-control" placeholder="Aryan ">
+                                    <input type="text" class="form-control" placeholder="Enter your first name">
                                 </div>
                                 <div class="mb-3 col-4 ms-5">
                                     <label for="exampleInputEmail1" class="form-label fw-bold">Last Name</label>
-                                    <input type="text" class="form-control" placeholder="Sharma">
+                                    <input type="text" class="form-control" placeholder="Enter your last name">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col-4">
+                                    <label for="exampleInputEmail1" class="form-label fw-bold">City</label>
+                                    <input type="text" class="form-control" placeholder="Enter your city name">
+                                </div>
+                                <div class="mb-3 col-4 ms-5">
+                                    <label for="exampleInputEmail1" class="form-label fw-bold">Pin Code</label>
+                                    <input type="text" class="form-control" placeholder="Enter pin code no">
                                 </div>
                             </div>
 
-                            your Gender
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1" checked>
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Male
-                                </label>
+                            <div class="row">
+                                <div class="mb-3 col-4">
+                                    <label for="exampleInputEmail1" class="form-label fw-bold">Phone Number</label>
+                                    <input type="text" class="form-control" placeholder="Enter Alternative phone no.">
+                                </div>
+                                <div class="mb-3 col-4 ms-5">
+                                    <label for="exampleInputEmail1" class="form-label fw-bold">State</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Select your State</option>
+                                        <option value="3">Dehli</option>
+                                        <option value="2">Haryana</option>
+                                        <option value="1">Moradabad</option>
+                                        <option value="2">Sambhal</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input"  type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault2" >
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Female
-                                </label>
-                            </div>
-
-                            <div class="mb-3 col-4">
-                                <label for="exampleInputEmail1" class="form-label fw-bold">Email </label>
-                                <input type="email" class="form-control" placeholder="pururajsbl20">
+                            <span class="fw-bold "> Address Location</span>
+                            <div class="row container my-3 ">
+                                <div class="col-2 form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1" checked>
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Home
+                                    </label>
+                                </div>
+                                <div class="col-2 form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        Office
+                                    </label>
+                                </div>
+                                <div class="col-2 form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault3">
+                                    <label class="form-check-label" for="flexRadioDefault3">
+                                        Other
+                                    </label>
+                                </div>
                             </div>
 
                             <div class="mb-3 col-9">
                                 <label for="exampleInputEmail1" class="form-label fw-bold">Address </label>
-                                <input type="text" class="form-control" placeholder="In front of SDM court Sambhal, 244302">
+                                <input type="text" class="form-control"
+                                    placeholder="Enter a address where you get the product">
                             </div>
-                            <button type="submit" class="btn btn-success mt-4">Chenge</button>
+                            <button type="submit" class="btn btn-success mt-4">Save Address</button>
                         </form>
                     </div>
 
+
                 </div>
-
             </div>
-
         </div>
     </div>
-
-    <!----------------------------------------------- About section end ----------------------------------------------->
-
+    <!-------------------------------- Here the manage address section is end -------------------------------->
 
 
     <!----------------------------------------------- Footer section start ----------------------------------------------->

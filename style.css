@@ -21,9 +21,11 @@ html {
 }
 
 .navbar {
-    /* background: rgb(255, 218, 149); */
+    /* background: rgb(255, 238, 169); */
     /* background: rgb(186, 255, 149); */
-    /* background: rgb(255, 255, 255); */
+    background: rgb(255, 255, 255);
+    /* background: linear-gradient(90deg, rgba(184,235,138,1) 0%, rgba(180,251,149,1) 50%, rgb(255, 255, 246) 100%); */
+    /* background: linear-gradient(90deg, rgba(76,198,76,1) 0%, rgba(252,231,30,0.76234243697479) 50%, rgba(240,255,241,1) 100%); */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-shadow: 0px 0px 20px 20px solid black !important;
 
@@ -32,14 +34,18 @@ html {
 .navbar .logo {
     color: rgb(12, 12, 12) !important;
     font-size: 1.4rem;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 .navbar .logo i {
     font-size: 2.2rem;
+    background: rgba(74, 130, 19, 0.922) ;
+
 }
 
 .navbar .logo span {
-    color: rgb(250, 255, 249);
+    color: rgb(255, 255, 255);
     text-shadow: 1px 1px 3px rgb(11, 11, 11);
     letter-spacing: 2px;
     font-weight: 600;
@@ -47,30 +53,34 @@ html {
     font-family: 'Times New Roman', Times, serif;
 }
 
-.nav-search-box {
-    width: 30rem;
+.nav-search-box i {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-left: none !important;
+    padding: 8px !important;
+    position: relative;
+    top: 1px;
+    left: -1.6rem;
+
+}
+
+.nav-search-box i:hover {
+    color: white !important;
+    background: rgb(62, 137, 22) !important;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
 .nav-search-box input {
     outline: none;
-    box-shadow: 0px 0px 12px 20px solid black !important;
+    box-shadow: 1px 0px 12px 20px solid black !important;
     border-radius: 30px;
-}
-
-.navbar ul li a {
-    color: rgb(21, 21, 21) !important;
-    font-size: 1.3rem;
-}
-
-.navbar ul li a:hover {
-    color: rgb(62, 137, 22) !important;
+    width: 25rem !important;
 }
 
 .nav-login-icon i {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: rgb(40, 40, 40);
-    background: #fffff9;
-
 }
 
 .nav-login-icon i:hover {
@@ -78,8 +88,6 @@ html {
     color: rgb(255, 255, 255);
     background: rgb(62, 137, 22) !important;
 }
-
-
 
 .nav-login-icon img {
     height: 55px;
@@ -89,13 +97,47 @@ html {
 
 .nav-login-icon img:hover {
     cursor: pointer;
-
 }
+
+/*---------------- secon navbaer start----------------*/
+
+.Navbaer-list .navbar{
+    position: relative;
+    top: -1px;
+    /* background: rgb(255, 218, 149); */
+    /* background: rgb(186, 255, 149) ; */
+    /* background: rgb(250, 250, 250); */
+    background: linear-gradient(90deg, rgba(184,235,138,1) 0%, rgba(180,251,149,1) 50%, rgb(255, 255, 246) 100%);
+    z-index: 5;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.Navbaer-list ul {
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 3px;
+    /* margin-left: 175px; */
+}
+
+.navbar ul li a {
+    color: rgb(21, 21, 21) !important;
+    font-size: 1.3rem;
+    margin: 8px;
+    padding: 2px;
+}
+
+.navbar ul li a:hover {
+    color: rgb(62, 137, 22) !important;
+    transform: scale(1.2);
+    transition: all 0.2s;
+}
+
+/* ----------------secon navbaer end----------------*/
 
 /* User logout popup */
 .user-logout-popup {
     background: #fffcf6;
-    z-index: 999;
+    z-index: 99999;
     height: 20vh;
     width: 15rem;
     position: fixed;
@@ -124,7 +166,7 @@ html {
 
 .cartlist {
     background: #ffe9b0;
-    z-index: 999;
+    z-index: 99999;
     height: 80vh;
     width: 21rem;
     position: fixed;
@@ -158,7 +200,7 @@ html {
 /*  --------------------- user login popup start -------------------- */
 .user-login-popup {
     background: #f4fffd;
-    z-index: 999;
+    z-index: 9999;
     height: 80vh;
     width: 21rem;
     position: fixed;
@@ -344,7 +386,6 @@ html {
 .card {
     cursor: pointer;
     overflow: hidden;
-    
 }
 
 .card:hover {
@@ -556,6 +597,79 @@ html {
 /*----------------------------------------------- Blog section end -----------------------------------------------*/
 
 
+/*----------------------------------------------- Clients Reviews section start -----------------------------------------------*/
+
+.student-slider-section {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 50vh;
+    overflow: hidden;
+}
+
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 400px !important;
+    height: 279px !important;
+    background: #d1ebff;
+    box-shadow: 0px 0px 10px black;
+    filter: blur(3px);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.swiper-slide-active {
+    filter: blur(0px);
+
+}
+
+.swiper-slide img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+
+}
+
+.cart-text{
+    background: url('Img/reviw.jpg') no-repeat;
+    object-fit: cover;
+    height: 50vh;
+    width: 100vh !important;
+    /* background-size: cover; */
+}
+
+.student-item h2 {
+    color: rgb(255, 140, 102);
+    font-size: 1.7rem;
+}
+
+.student-item .student-course {
+    color: rgb(0, 0, 0);
+    font-size: 0.88rem;
+
+}
+
+.student-item p {
+    color: rgb(73, 73, 73);
+    font-size: 0.899rem;
+
+}
+
+/*----------------------------------------------- Clients Reviews section end -----------------------------------------------*/
+
+
+
 /*----------------------------------------------- Footer section start -----------------------------------------------*/
 .footer-list ul li {
     padding: 5px;
@@ -643,9 +757,10 @@ html {
 
 /* -####################################  View cart page ####################################-*/
 
-.viewcart-list  {
+.viewcart-list {
     font-family: 'Times New Roman', Times, serif;
 }
+
 .viewcart-list table tr th {
     border: 1px solid black;
     padding: 23px;
@@ -695,6 +810,15 @@ html {
     text-decoration: none !important;
 }
 
+.profile-left-nav-list ul a:hover li {
+    background: #2f641f !important;
+    color: white !important;
+    transition: all 0.2s;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    transform: translateX(10px);
+}
+
 .profile-page {
     height: 10px !important;
 }
@@ -702,4 +826,43 @@ html {
 .profile-page-details .left-side,
 .profile-page-details .right-side-content {
     font-family: 'Times New Roman', Times, serif;
+}
+
+.profile-page-details .left-side div {
+    position: relative;
+}
+
+.profile-page-details .left-side .edit-pic {
+    position: absolute;
+    top: 75px;
+    right: 38%;
+    /* display: none; */
+}
+
+.profile-page-details .left-side img:hover .profile-page-details .left-side div i {
+    /* display: block !important; */
+    background: #000 !important;
+}
+
+/* -####################################  order page start ####################################-*/
+.profile-left-nav-list a {
+    background:  red !important;
+}
+
+.right-side-content .order-list img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+/* -####################################  Manage address page start ####################################-*/
+.old-addres-form .plus-addres:hover{
+    background: #3c9e35 !important;
+    color: white !important;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.old-addres-form .plus-addres:hover,.old-addres-form  i:hover{
+    cursor: pointer;
 }

@@ -23,47 +23,65 @@
 </head>
 
 <body>
-    <!----------------------------------------------- Header section start ----------------------------------------------->
+    <!----------------------------------------------- Header section star ----------------------------------------------->
 
     <header class="header " id="header">
-        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <nav class="navbar navbar-expand-lg  navbar-light sticky-top">
             <div class="container-fluid">
                 <a class="text-success navbar-brand logo text-center" href="index.html"><i
-                        class="bi bi-house-door text-light rounded p-1 bg-success"></i>
-                    <span>E-Grocery</span>
+                        class="bi bi-house-door text-light rounded p-1"></i>
+                    <span class="p-2 text-danger">E-Grocery</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                    <div class="nav-search-box m-auto ml-5">
-                        <input class=" w-100 py-1 px-3" type="search" placeholder="Search here..">
-                        <!-- <span class="nav-acc-search m-1" onclick="showsearchbox()"> <i class="bi bi-search"></i> </span> -->
-
+                <div class="collapse navbar-collapse mt-3" id="navbarSupportedContent">
+                    <div class=" mt-auto ms-5">
+                        <p class=" fs-6 text-dark"><i class="bi bi-geo-alt-fill"></i> Delivery to Sambhal 244302</p>
                     </div>
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#Home">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#Products">Products</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="#Features">
-                                Features
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#Contact">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#Blog">Blog</a>
-                        </li>
 
-                    </ul>
+                    <div class="nav-search-box ms-auto me-4">
+                        <input class="border border-dark  py-1 px-4" id="searchbox" type="search"
+                            placeholder="Search here..">
+                        <label class="b" for="searchbox" onclick="showsearchbox()"> <i
+                                class="p-2 bg-white text-dark border border-dark bi bi-search"></i> </label>
+                    </div>
+
+
+                </div>
+            </div>
+        </nav>
+        <!------------------------------------ second navbaer start ------------------------------------>
+        <div class="Navbaer-list ">
+            <nav class="navbar  navbar-expand-lg  navbar-light sticky-top">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#seconNavbar"
+                        aria-controls="seconNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="seconNavbar">
+                        <ul class="navbar-nav mb-lg-0 ">
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold active" aria-current="page" href="#Home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold" href="#Products">Products</a>
+                            </li>
+                            <li class="nav-item  fw-bold">
+                                <a class="nav-link" href="#Features">
+                                    Features
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold" href="#Contact">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fw-bold" href="#Blog">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="nav-login-icon d-flex  align-items-center">
                         <span class="nav-acc-card m-1  " onclick="showcart()"><i class="bi bi-cart3  p-2 rounded"></i>
                             <span class="cart-notification bg-danger text-light p-1 rounded-circle">2</span>
@@ -74,8 +92,10 @@
                                 onclick="logout()" src="Img/afterlogin.png" alt=""></span>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+
+        </div>
+        <!------------------------------------ second navbaer end ------------------------------------>
 
         <!------------- user logout  popup------------->
         <div class="user-logout-popup  p-3" id="logout">
@@ -112,7 +132,7 @@
             }
         </script> -->
 
-        <!--------------------- My card list start --------------------->
+        <!--------------------- My card list star --------------------->
         <div class="cartlist rounded px-3 py-4 " id="cart">
             <div class="d-flex justify-content-between text-dark fw-bold">
                 <p class="fs-5 ">My Cart</p>
@@ -120,7 +140,7 @@
             </div>
             <div class="cartlist-items bg-light p-1 ">
                 <div>
-                    <div class="bg-gray rounded px-1 py-2 my-2 d-flex justify-content-between align-items-start ">
+                    <div class="bg-gray rounded px-1 py-2 my-2 d-flex justify-content-between align-items-star ">
                         <div class="rounded p-1 bg-white"><img src="Img/Veg (2).png" alt=""></div>
                         <div class="">
                             <p class="fs-5 fw-bold">Tomato</p>
@@ -139,7 +159,7 @@
                         </div>
                         <div><i class=" fs-5 bi bi-trash"></i></div>
                     </div>
-                    <div class="bg-gray rounded px-1 py-2 my-2 d-flex justify-content-between align-items-start ">
+                    <div class="bg-gray rounded px-1 py-2 my-2 d-flex justify-content-between align-items-star ">
                         <div class="rounded p-1 bg-white"><img src="Img/Veg (4).png" alt=""></div>
                         <div class="">
                             <p class="fs-5 fw-bold">Cauliflower</p>
@@ -220,8 +240,8 @@
                             placeholder="Enter your Email" required>
                         <input class=" my-4 bg-none d-flex py-1 border border-dark" type="password"
                             placeholder="Enter your password" required>
-                        <a href="#"
-                            class="col-8 login-popup-submit-btn btn btn-success text-white mt-2 " onclick="afterlogin()">Sign up </a>
+                        <a href="#" class="col-8 login-popup-submit-btn btn btn-success text-white mt-2 "
+                            onclick="afterlogin()">Sign up </a>
                     </form>
                     <p class="mt-4">Already have an acount..? <a href="#" class="text-decoration-none"
                             onclick="showuser()">Login.</a></p>
@@ -253,7 +273,7 @@
                         <h1 class="fw-bold  text-dark">Order <span class="text-danger">Online</span> Save your <span
                                 class="text-danger">Time</span>.</h1>
                         <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quis optio
-                            fuga asperioresdfdfefg
+                            fuga asperiores
                             dolorum dolor.</p>
                         <button class="btn btn-outline-success mt-4">Get Start</button>
 
@@ -286,7 +306,7 @@
     <!----------------------------------------------- Header section end ----------------------------------------------->
 
 
-    <!----------------------------------------------- About section start ----------------------------------------------->
+    <!----------------------------------------------- About section star ----------------------------------------------->
     <!-- About section -->
     <!-- <div class="about">
      
@@ -294,9 +314,9 @@
     <!----------------------------------------------- About section end ----------------------------------------------->
 
 
-    <!----------------------------------------------- Product section start ----------------------------------------------->
+    <!----------------------------------------------- Product section star ----------------------------------------------->
     <div class="products mt-2 py-4 mx-4 rounded ">
-        <div class="text-center section-heading"  id="Home">
+        <div class="text-center section-heading" id="Home">
             <h3><span class="">P</span>roducts</h3>
             <p>Our Best Products</p>
         </div>
@@ -542,7 +562,7 @@
     </div>
     <!----------------------------------------------- Product section end ----------------------------------------------->
 
-    <!----------------------------------------------- banner1 section start ----------------------------------------------->
+    <!----------------------------------------------- banner1 section star ----------------------------------------------->
 
     <div class="banner1 mt-5  position-relative">
         <div class="banner1-text position-absolute ">
@@ -554,7 +574,7 @@
     </div>
     <!----------------------------------------------- banner1 section end ----------------------------------------------->
 
-    <!----------------------------------------------- Product second section start ----------------------------------------------->
+    <!----------------------------------------------- Product second section star ----------------------------------------------->
     <div class="Features mt-2 mx-4 py-4">
         <div class="text-center section-heading" id="Products">
             <h3><span class="">F</span>routs</h3>
@@ -773,7 +793,7 @@
     <!----------------------------------------------- Product second section end ----------------------------------------------->
 
 
-    <!----------------------------------------------- banner2 section start ----------------------------------------------->
+    <!----------------------------------------------- banner2 section star ----------------------------------------------->
 
     <div class="banner2 mt-5  position-relative">
         <div class="banner2-text position-absolute ">
@@ -807,7 +827,7 @@
     <!----------------------------------------------- banner2 section end ----------------------------------------------->
 
 
-    <!----------------------------------------------- Service section start ----------------------------------------------->
+    <!----------------------------------------------- Service section star ----------------------------------------------->
     <div class="Services mt-5">
         <div class="text-center section-heading" id="Features">
             <h3><span class="">F</span>eatures</h3>
@@ -863,7 +883,7 @@
 
     <!----------------------------------------------- Service section end ----------------------------------------------->
 
-    <!----------------------------------------------- Contact section start ----------------------------------------------->
+    <!----------------------------------------------- Contact section star ----------------------------------------------->
 
     <div class="contact   mt-5">
         <div class="text-center section-heading" id="Contact">
@@ -907,7 +927,7 @@
     <!----------------------------------------------- Contact section end ----------------------------------------------->
 
 
-    <!----------------------------------------------- Blog section start ----------------------------------------------->
+    <!----------------------------------------------- Blog section star ----------------------------------------------->
     <div class="blog mt-4 mx-4 py-2">
         <div class="text-center section-heading" id="Blog">
             <h3><span class="">B</span>log</h3>
@@ -970,8 +990,153 @@
 
     <!----------------------------------------------- Blog section end ----------------------------------------------->
 
+    <!----------------------------------------------- clients-review section end ------------------------------------------->
 
-    <!----------------------------------------------- Footer section start ----------------------------------------------->
+    <!-------------------------------- swiper slider star------------------------------ -->
+    <div class="client-review">
+
+        <div class="container faculty-section mt-3 " id="Faculty">
+
+            <div class="text-center section-heading" id="Blog">
+                <h3><span class="">R</span>eviews</h3>
+                <p>Our satisfied costumer</p>
+            </div>
+            <section class="student-slider-section">
+                <div class="mySwiper  cart-text">
+                    <div class="swiper-wrapper ">
+                        <div class="swiper-slide ">
+                            <div class="card mb-3 border border-0">
+                                <div class="row g-0 p-3 m-2">
+                                    <div class="col-md-2 ">
+                                        <img src="img/reviewer-1.png" class="img-fluid rounded-circle" alt="loading">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <div class="card-body text-start">
+                                            <h5 class="card-title">Johan Sinha</h5>
+                                            <p class="text-warning"><i class="bi bi-star-fill"></i><i
+                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                    class="bi bi-star-fill"></i><i class="bi bi-star text-dark"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="text-start">
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Deleniti id aliquid necessitatibus ipsam quas temporibus!</p>
+                                        <button class="btn btn-success ">Read More..</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide ">
+                            <div class="card mb-3 border border-0">
+                                <div class="row g-0 p-3 m-2">
+                                    <div class="col-md-2 ">
+                                        <img src="img/reviewer-1.png" class="img-fluid rounded-circle" alt="loading">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <div class="card-body text-start">
+                                            <h5 class="card-title">Johan Sinha</h5>
+                                            <p class="text-warning"><i class="bi bi-star-fill"></i><i
+                                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                class="bi bi-star-fill"></i><i class="bi bi-star text-dark"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="text-start">
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Deleniti id aliquid necessitatibus ipsam quas temporibus!</p>
+                                        <button class="btn btn-success ">Read More..</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide ">
+                            <div class="card mb-3 border border-0">
+                                <div class="row g-0 p-3 m-2">
+                                    <div class="col-md-2 ">
+                                        <img src="img/reviewer-1.png" class="img-fluid rounded-circle" alt="loading">
+
+                                    </div>
+                                    <div class="col-md-10">
+                                        <div class="card-body text-start">
+                                            <h5 class="card-title">Johan Sinha</h5>
+                                             <p class="text-warning"><i class="bi bi-star-fill"></i><i
+                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                    class="bi bi-star-fill"></i><i class="bi bi-star text-dark"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="text-start">
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Deleniti id aliquid necessitatibus ipsam quas temporibus!</p>
+                                        <button class="btn btn-success ">Read More..</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ">
+                            <div class="card mb-3 border border-0">
+                                <div class="row g-0 p-3 m-2">
+                                    <div class="col-md-2 ">
+                                        <img src="img/reviewer-1.png" class="img-fluid rounded-circle" alt="loading">
+
+                                    </div>
+                                    <div class="col-md-10">
+                                        <div class="card-body text-start">
+                                            <h5 class="card-title">Johan Sinha</h5>
+                                            <p class="text-warning"><i class="bi bi-star-fill"></i><i
+                                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                                    class="bi bi-star-fill"></i><i class="bi bi-star text-dark"></i></p>
+                                        </div>
+                                    </div>
+                                    <div class="text-start">
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Deleniti id aliquid necessitatibus ipsam quas temporibus!</p>
+                                        <button class="btn btn-success ">Read More..</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <!------------ Swiper js link ------------>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!---------------------------------------- swiper js  first ---------------------------------------->
+    <script src=" https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+
+    <!---------------------------------------- swiper js link second ---------------------------------------->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2,
+                slideShadows: true,
+            },
+            // loop :true,
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <!----------------------------------------------- clients-review section end ------------------------------------------->
+
+    <!----------------------------------------------- Footer section star ----------------------------------------------->
 
     <div class="footer bg-light border-top border-gray mt-5 h-100">
         <div class="container">

@@ -15,22 +15,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- cdn link for zoom effect on img -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <!-- Bootstrap icon link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <!-- Custom css for zoom effect link -->
-    <link rel="stylesheet" href="magnify.css">
     <!-- Custom css link -->
     <link rel="stylesheet" href="style.css">
     <script src="code.js"></script>
-
 </head>
 
 <body>
     <!----------------------------------------------- Header section start ----------------------------------------------->
 
-    <header class=" Product-details-header">
+    <header class="header profile-page " id="header">
         <nav class="navbar navbar-expand-lg navbar-light sticky-top">
             <div class="container-fluid">
                 <a class="text-success navbar-brand logo text-center" href="index.html"><i
@@ -71,17 +66,19 @@
                     </ul>
                     <div class="nav-login-icon d-flex  align-items-center">
                         <span class="nav-acc-card m-1  " onclick="showcart()"><i class="bi bi-cart3  p-2 rounded"></i>
+                            <span class="cart-notification bg-danger text-light p-1 rounded-circle">2</span>
                         </span>
-                        <span class="nav-acc-user " id="afterlogin"><img class="p-2 rounded"
-                                onclick="logout()" src="Img/afterlogin.png" alt=""></span>
+                        <!-- <span class="nav-acc-user m-1 " id="loginicon" onclick="showuser()"> <i
+                                class="bi bi-person-circle p-2 rounded"></i> </span> -->
+                        <span class="nav-acc-user " id="afterlogin"><img class="p-2 rounded" onclick="logout()"
+                                src="Img/afterlogin.png" alt=""></span>
                     </div>
                 </div>
             </div>
         </nav>
 
-   
         <!------------- user logout  popup------------->
-        <div class="user-logout-popup  p-3" id="logout" >
+        <div class="user-logout-popup  p-3" id="logout">
             <div class="">
                 <ul class="list-unstyled">
                     <a class="fs-5 fw-bold p-2 m-2  text-decoration-none text-dark" href="user profile.html">View
@@ -146,160 +143,198 @@
                 <a class="col-10 fw-bold btn btn-warning tex-decoration-none" href="vewcart.html">Checkout</a>
             </div>
         </div>
+
+        <!------------- user login  popup------------->
+        <div class="user-login-popup  p-3" id="user">
+            <div class="">
+                <p class="fw-bold fs-4 text-center text-success">Login Now</p>
+                <div class="text-center">
+                    <input class=" m-2 p-2 rounded" type="email" name="" id="" placeholder="Enter your email"
+                        autocomplete="off" aria-busy="true">
+                    <input class=" m-2 p-2 rounded" type="password" name="" id="" placeholder="Enter your password"
+                        autocomplete="off" aria-busy="true">
+
+                </div>
+                <i onclick="hideuser()" class="cross-icon fs-2 bi bi-x fs-2"></i>
+                <div class="text-center mt-4 ">
+                    <p class="ms-4">Forget password.? <span class="text-success">click here.</span></p>
+                    <p class="px-5" onclick="showsignpopup()">Don't have an account..? <span class="text-success">create
+                            account</span></p>
+                </div>
+                <div class="text-center">
+                    <a href="#" class="btn btn-outline-success mt-4 px-5 py-2" onclick="afterlogin()"> Sign in </a>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!---------------------------------- user sign up form popup   ----------------------------------->
+        <div class="login-popup-form bg-light border border-dark w-50 " id="sign-popup">
+            <div class="text-center head-cross-icon">
+                <i onclick="hidesignpopup()" class="bi bi-x-lg bg-light text-danger p-1"></i>
+
+            </div>
+            <div class="row h-100">
+                <div class="left col ms-2 rounded text-center">
+                    <h3 class="text-white">Create account with</h3>
+                    <p class="fs-3 my-4">
+                        <i class="bi bi-facebook bg-light p-2 border border-dark"></i>
+                        <i class="bi bi-google bg-light p-2 border border-dark"></i>
+                        <i class="bi bi-linkedin bg-light p-2 border border-dark"></i>
+                    </p>
+                    <p class="text-light col-10 text-center ms-3">Lorem ipsum dolopisicing elitVFDG. Voluptas in beatae
+                        unde diusto?</p>
+                    <button class="btn btn-success col-10 mt-2"> Login</button>
+                </div>
+                <div class="right col mt-4 row-cols-1 ms-4 ">
+                    <form action="#">
+
+                        <input class=" my-4 bg-none d-flex py-1 border border-dark" type="email"
+                            placeholder="Enter your Name" required>
+                        <input class=" my-4 bg-none d-flex py-1 border border-dark" type="email"
+                            placeholder="Enter your Email" required>
+                        <input class=" my-4 bg-none d-flex py-1 border border-dark" type="password"
+                            placeholder="Enter your password" required>
+                        <a href="dashboard.html"
+                            class="col-8 login-popup-submit-btn btn btn-success text-white mt-2 ">Sign up </a>
+                    </form>
+                    <p class="mt-4">Already have an acount..? <a href="#" class="text-decoration-none"
+                            onclick="showuser()">Login.</a></p>
+                </div>
+            </div>
+        </div>
     </header>
+
 
     <!----------------------------------------------- Header section end ----------------------------------------------->
 
-    <!----------------------------------------------- viewcart section start ----------------------------------------------->
 
-    <div class="viewcart my-5">
-        <div class="container ">
-            <div class="viewcart-list mt-5" id="My Favorites">
-                <div class=" ">
-                    <h3 class="text-center fw-bold text-success">Your Cart List </h3>
-                    <hr>
-                    <table class="mt-5 m-auto ">
-                        <tr>
-                            <th>Product Picture</th>
-                            <th>Product Name</th>
-                            <th>Product Price</th>
-                            <th>Product Quantity</th>
+    <!----------------------------------------------- About section start ----------------------------------------------->
+    <div class="mx-5 my-3 profile-page-details row">
+        <div class="row " style="margin-top: 8%;">
+            <div class="left-side-nav col-3 ">
 
-                            <th>Delete Product</th>
-                        </tr>
 
-                        <tr>
-                            <td><img src="Img/Veg (2).png" alt=""></td>
-                            <td><a class="fw-bold text-success" href="Product-details.html">Tomato</a></td>
-                            <td>80 &#8377;</td>
-                            <td class=" text-center">
-                                <div class=" d-flex mt-1  ">
-                                    <input class="btn btn-danger btn-sm text-white  fw-bold" id="minus"
-                                        onclick="minus()" type="button" value="-">
-                                    &nbsp;
-                                    <input class="text-center total fw-bold border border-gray rounded" id="total"
-                                        type="text" value="1 kg" readonly style="width: 60px;"> &nbsp;
-                                    <input class="btn btn-success btn-sm text-white  fw-bold" id="plus" onclick="plus()"
-                                        type="button" value="+">
-                                </div>
+                <div class="left-side ">
 
-                            </td>
-                            <td><i class="fs-5 bi bi-trash-fill"></i></td>
+                    <div class="row bg-light user-profile py-2 px-3  text-center">
+                        <div class="col" style="height: 60px; width: 85px ;">
+                            <img src="Img/afterlogin.png" alt=""
+                                style="height: 100px; width: 100px ; object-fit: cover;">
+                            <i class="edit-pic fs-4 bi bi-pencil-square"></i>
 
-                        </tr>
+                        </div>
+                        <div class="col-12 align-center text-center mt-5">
+                            <p> Hello, <br> <strong> Aryan Sharma</strong></p>
+                        </div>
 
-                        <tr>
-                            <td><img src="Img/Frouts (6).png" alt=""></td>
-                            <td><a class="fw-bold text-success" href="Product-details.html">Carrot</a></td>
-                            <td>60 &#8377;</td>
-                            <td class=" text-center">
-                                <div class=" d-flex mt-1  ">
-                                    <input class="btn btn-danger btn-sm text-white  fw-bold" id="minus"
-                                        onclick="minus()" type="button" value="-">
-                                    &nbsp;
-                                    <input class="text-center total fw-bold border border-gray rounded" id="total"
-                                        type="text" value="1 kg" readonly style="width: 60px;"> &nbsp;
-                                    <input class="btn btn-success btn-sm text-white  fw-bold" id="plus" onclick="plus()"
-                                        type="button" value="+">
-                                </div>
+                    </div>
 
-                            </td>
-                            <td><i class="fs-5 bi bi-trash-fill"></i></td>
+                    <div class="row profile-left-nav-list mt-2 bg-light ">
+                        <ul class="list-unstyled  py-2 px-3 ">
+                            <a href="user profile.html" class="">
+                                <li class="px-2 py-1 my-1  fs-5"><i class="bi bi-info-circle"></i> Personal Information
+                                </li>
+                            </a>
 
-                        </tr>
-                        <tr>
-                            <td><img src="Img/Frouts (2).png" alt=""></td>
-                            <td><a class="fw-bold text-success" href="Product-details.html">Grapes</a> </td>
-                            <td>60&#8377;</td>
-                            <td>
-                                <div class=" d-flex mt-1  ">
-                                    <input class="btn btn-danger btn-sm text-white  fw-bold" id="minus"
-                                        onclick="minus()" type="button" value="-">
-                                    &nbsp;
-                                    <input class="text-center total fw-bold border border-gray rounded" id="total"
-                                        type="text" value="2 kg" readonly style="width: 60px;"> &nbsp;
-                                    <input class="btn btn-success btn-sm text-white  fw-bold" id="plus" onclick="plus()"
-                                        type="button" value="+">
-                                </div>
-                            </td>
-                            <td><i class="fs-5 bi bi-trash-fill"></i></td>
-
-                        </tr>
-                        <tr>
-                            <td><img src="Img/Frouts (1).png" alt=""></td>
-                            <td><a class="fw-bold text-success" href="Product-details.html">Strovwry</a></td>
-                            <td>300&#8377;</td>
-                            <td>
-                                <div class=" d-flex mt-1  ">
-                                    <input class="btn btn-danger btn-sm text-white  fw-bold" id="minus"
-                                        onclick="minus()" type="button" value="-">
-                                    &nbsp;
-                                    <input class="text-center total fw-bold border border-gray rounded" id="total"
-                                        type="text" value="1 kg" readonly style="width: 60px;"> &nbsp;
-                                    <input class="btn btn-success btn-sm text-white  fw-bold" id="plus" onclick="plus()"
-                                        type="button" value="+">
-                                </div>
-                            </td>
-                            <td><i class="fs-5 bi bi-trash-fill"></i></td>
-
-                        </tr>
-                        <tr>
-                            <td><img src="Img/Frouts (4).png" alt=""></td>
-                            <td><a class="fw-bold text-success" href="Product-details.html">Frouts combo</a></td>
-                            <td>260&#8377;</td>
-                            <td>
-                                <div class=" d-flex mt-1  ">
-                                    <input class="btn btn-danger btn-sm text-white  fw-bold" id="minus"
-                                        onclick="minus()" type="button" value="-">
-                                    &nbsp;
-                                    <input class="text-center total fw-bold border border-gray rounded" id="total"
-                                        type="text" value="3 kg" readonly style="width: 60px;"> &nbsp;
-                                    <input class="btn btn-success btn-sm text-white  fw-bold" id="plus" onclick="plus()"
-                                        type="button" value="+">
-                                </div>
-                            </td>
-                            <td><i class="fs-5 bi bi-trash-fill"></i></td>
-
-                        </tr>
-                        <tr>
-                            <td><img src="Img/Frouts (5).png" alt=""></td>
-                            <td><a class="fw-bold text-success" href="Product-details.html">Apple</a></td>
-                            <td>180&#8377;</td>
-                            <td>
-                                <div class=" d-flex mt-1  ">
-                                    <input class="btn btn-danger btn-sm text-white  fw-bold" id="minus"
-                                        onclick="minus()" type="button" value="-">
-                                    &nbsp;
-                                    <input class="text-center total fw-bold border border-gray rounded" id="total"
-                                        type="text" value="2 kg" readonly style="width: 60px;"> &nbsp;
-                                    <input class="btn btn-success btn-sm text-white  fw-bold" id="plus" onclick="plus()"
-                                        type="button" value="+">
-                                </div>
-                            </td>
-                            <td> <i class="fs-5 bi bi-trash-fill"></i></td>
-
-                        </tr>
-
-                        <tr>
-                            <td class="fw-bold " colspan="2">Sub Total</td>
-                            <td class="fw-bold text-start " colspan="3">940 &#8377;</td>
-                        </tr>
-                        <tr>
-                            <td class="fw-bold text-danger" colspan="2">Tex</td>
-                            <td class="fw-bold text-start text-danger" colspan="3">110 &#8377;</td>
-                        </tr>
-                        <tr>
-                            <td class="fw-bold text-success" colspan="2">Total Price</td>
-                            <td class="fw-bold text-start text-success" colspan="3">1050 &#8377;</td>
-                        </tr>
-                    </table>
+                            <a href="order.html">
+                                <li class="px-2 py-1 my-1 fs-5 bg-success rounded text-white"><i
+                                        class="bi bi-cart4"></i> My order</li>
+                            </a>
+                            <a href="Wishlist.html">
+                                <li class="px-2 py-1 my-1 fs-5"><i class="bi bi-bag-heart"></i> My Wishlist</li>
+                            </a>
+                            <a href="address.html">
+                                <li class="px-2 py-1 my-1 fs-5"><i class="bi bi-pin-map-fill"></i> Delivery Address</li>
+                            </a>
+                            <a href="index.html">
+                                <li class="px-2 py-1 my-1 fs-5"><i class="bi bi-power"></i> Logout</li>
+                            </a>
+                        </ul>
+                    </div>
                 </div>
+
+            </div>
+
+            <!-------------------------------- Here the main user right order section is start -------------------------------->
+            <div class="col-8 right-side-content ">
+                <div class="wishlist-page-right px-4 py-2 bg-light" id="My Wishlist">
+                    <div class=" py-2 ">
+                        <p class="fs-3 ">
+                            <strong>My Order</strong>
+                        </p>
+                    </div>
+
+                    <div class="order-list bg-white my-2 py-2">
+                        <div class="order-item d-flex align-items-start justify-content-between">
+                            <div class="col-2">
+                                <img src="Img/patato.png" alt="loading">
+
+                            </div>
+                            <div class="col-3">
+                                <p class="fw-bold fs-5">Potato</p>
+                                <p>Qty : 2Kg</p>
+                                <p class=" w-50 text-warning"><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star"></i></p>
+
+                            </div>
+                            <div class="col-2 fw-bold ">80 &#8377;</div>
+                            <div class="col-4">
+                                <p><i class="bi bi-patch-check-fill text-danger"></i> Order on 02/06/2023</p>
+                                <p><i class="bi bi-patch-check-fill text-success"></i> Deliver on 31/05/2023</p>
+                                <div class="d-flex justify-content-start mt-3">
+                                    <button class="btn btn-success btn-sm"><i class="bi bi-eye"></i> View Order</button>
+                                    <button class="btn btn-danger btn-sm ms-1"><i class="bi bi-trash3-fill"></i> Cancle
+                                        Order</button>
+                                </div>
+                            </div>
+
+                        </div>
+                      
+                    </div>
+
+
+                    <div class="order-list bg-white my-2  py-2">
+                        <div class="order-item d-flex align-items-start justify-content-between">
+                            <div class="col-2">
+                                <img src="Img/apple.png" alt="loading">
+
+                            </div>
+                            <div class="col-3">
+                                <p class="fw-bold fs-5">Kashmiri Apple</p>
+                                <p>Qty : 2Kg</p>
+                                <p class="w-50 text-warning"><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></p>
+
+                            </div>
+                            <div class="col-2 fw-bold ">260 &#8377;</div>
+                            <div class="col-4">
+                                <p><i class="bi bi-patch-check-fill text-danger"></i> Order on 02/06/2023</p>
+                                <p><i class="bi bi-patch-check-fill text-success"></i> Deliver on 31/05/2023</p>
+                                <div class="d-flex justify-content-start mt-3">
+                                    <button class="btn btn-success btn-sm"><i class="bi bi-eye"></i> View Order</button>
+                                    <button class="btn btn-danger btn-sm ms-1"><i class="bi bi-trash3-fill"></i> Cancle
+                                        Order</button>
+                                </div>
+                            </div>
+
+                        </div>
+                      
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
     </div>
 
-    <!----------------------------------------------- viewcart  section end ----------------------------------------------->
+    <!----------------------------------------------- About section end ----------------------------------------------->
+
+
 
     <!----------------------------------------------- Footer section start ----------------------------------------------->
 
@@ -333,7 +368,7 @@
                                 <p class="fs-5 text-dark"> Contact Info</p>
                                 <li><i class="bi bi-caret-right-fill"></i> +91 9999995612</li>
                                 <li><i class="bi bi-caret-right-fill"></i> +91 9948925612</li>
-                                <li><i class="bi bi-caret-right-fill"></i> pu&#8377;rajsbl20@gmail.com</li>
+                                <li><i class="bi bi-caret-right-fill"></i> pururajsbl20@gmail.com</li>
                                 <li><i class="bi bi-caret-right-fill"></i> Sambhal, Uttar Pradesh</li>
                             </ul>
                         </div>

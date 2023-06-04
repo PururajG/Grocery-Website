@@ -118,4 +118,9 @@ function logout() {
 function hidelogout() {
     var logoutuser = document.getElementById('logout').style.display="none"
 }       
+// for manage address
+function oldaddress() {
+    let oldaddress = document.getElementById('old-address').style.display = "none"
+    let newaddress = document.getElementById('new-address').style.display = "block"
 
+}                 
